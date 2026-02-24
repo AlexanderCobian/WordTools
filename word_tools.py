@@ -132,7 +132,7 @@ def save_words(filepath):
     except:
         print("Error writing to \"{filepath}\"")
 
-def check_indel(short_word,long_word):
+def check_insert_or_delete(short_word,long_word):
     for i in range(len(long_word)):
         if long_word[:i] + long_word[i+1:] == short_word:
             return True
@@ -146,10 +146,10 @@ def hamming_distance(word1,word2):
     return distance
 
 def insertion_words(query_word):
-    return {w for w in words if len(w) - 1 == len(query_word) and check_indel(query_word,w)}
+    return {w for w in words if len(w) - 1 == len(query_word) and check_insert_or_delete(query_word,w)}
 
 def deletion_words(query_word):
-    return {w for w in words if len(w) + 1 == len(query_word) and check_indel(w,query_word)}
+    return {w for w in words if len(w) + 1 == len(query_word) and check_insert_or_delete(w,query_word)}
 
 def replacement_words(query_word):
     return {w for w in words if len(w) == len(query_word) and hamming_distance(query_word,w) == 1}
