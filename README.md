@@ -7,9 +7,9 @@ Essentially, the program does three things:
 
 1. It allows you to read in lists of words from files (and/or add and remove individual words of your choosing) to a dictionary of words.
 2. It allows you to "explore" words in order to quickly be shown all words in said dictionary which can be created by adding a letter to, removing a letter from, changing a single letter of, or rearranging the letters of the provided word.
-3. It allows you to search for word ladders (built from words in said dictionary) that connect two provided words of the same length. (A word ladder is a chain of words where each word is only one letter different from the words above and below it.)
+3. It allows you to search for word ladders (a chain of words where each word is only one letter different from the words above and below it) built from words in said dictionary that connect two provided words of the same length. 
 
-I create puzzle hunts, and this is just something I wrote for myself to help with the construction of word puzzles. Here's one such puzzle that I wrote in 2023 (sans its original plot context and visual formatting):
+I create puzzle hunts, and this is just something I wrote for myself to help with the construction of word puzzles. For word ladders in particular, I often want to make the starting and ending words thematically related, so I find this program useful for exploring which pairs might be most fruitful/interesting. Here's one word ladder puzzle that I wrote in 2023 (sans its original plot context and visual formatting):
 
 ## Example puzzle
 
