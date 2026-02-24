@@ -162,9 +162,9 @@ def find_paths(word1,word2,max_ladder_length):
     paths1 = [[word1]]
     paths2 = [[word2]]
     
-    return find_paths2(paths1,paths2,max_ladder_length,2,set(),set())
+    return find_paths_helper(paths1,paths2,max_ladder_length,2,set(),set())
 
-def find_paths2(paths1,paths2,max_ladder_length,ladder_length,words_traversed1,words_traversed2):
+def find_paths_helper(paths1,paths2,max_ladder_length,ladder_length,words_traversed1,words_traversed2):
     
     # check if we've connected paths1 to paths2 anywhere
     full_paths = []
@@ -204,7 +204,7 @@ def find_paths2(paths1,paths2,max_ladder_length,ladder_length,words_traversed1,w
         paths2 = new_paths
         words_traversed2 |= new_words_traversed
     
-    return find_paths2(paths1,paths2,max_ladder_length,ladder_length+1,words_traversed1,words_traversed2)
+    return find_paths_helper(paths1,paths2,max_ladder_length,ladder_length+1,words_traversed1,words_traversed2)
     
     
 
