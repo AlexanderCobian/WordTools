@@ -11,11 +11,13 @@ Essentially, the program does three things:
 
 I create puzzle hunts, and this is just something I wrote for myself to help with the construction of word puzzles. Here's one such puzzle that I wrote in 2023 (sans its original plot context and visual formatting):
 
-INSTRUCTIONS:
+## Example puzzle
+
+### Instructions
 
 Across these five word ladders, there are 28 missing words. A list of clues is provided for each, but these are in no particular order - clues from each ladder are mixed together and shuffled! Assemble the nine indicated letters to get the final answer to this puzzle.
 
-LADDERS:
+### Ladders
 
 |L1|L2|L3|L4|L5|
 |---|---|---|---|---|
@@ -30,7 +32,7 @@ LADDERS:
 |||||KNOB|
 
 
-CLUES:
+### Clues
 * Inherited organism characteristic determinant
 * A polite chap
 * A flat chunk, sometimes for writing
