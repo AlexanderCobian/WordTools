@@ -119,7 +119,6 @@ def load_words(filepath):
         print(f"Error with filepath \"{filepath}\"")
 
 def save_words(filepath):
-    
     if os.path.isfile(filepath):
         print(f"File \"{filepath}\" already exists. Type \"yes\" to confirm.")
         if input().lower() != "yes":
