@@ -158,10 +158,8 @@ def anagrams(query_word):
     return {w for w in words if sorted(query_word) == sorted(w) and query_word != w}
 
 def find_paths(word1,word2,max_ladder_length):
-    
     paths1 = [[word1]]
     paths2 = [[word2]]
-    
     return find_paths_helper(paths1,paths2,max_ladder_length,2,set(),set())
 
 def find_paths_helper(paths1,paths2,max_ladder_length,ladder_length,words_traversed1,words_traversed2):
