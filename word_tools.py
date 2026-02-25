@@ -2,7 +2,7 @@
 import os
 
 words = set()
-DEFAULT_MAX_LADDER_LENGTH = 8
+MAX_LADDER_LENGTH = 8
 
 def main():
     help()
@@ -64,7 +64,7 @@ def main():
                 continue
             
             if len(tokens) == 3:
-                max_ladder_length = DEFAULT_MAX_LADDER_LENGTH
+                max_ladder_length = MAX_LADDER_LENGTH
             elif len(tokens) == 4:
                 if not tokens[3].isdigit():
                     help()
@@ -79,7 +79,7 @@ def main():
                 for path in sorted(paths):
                     print("\t" + ">".join(path))
             else:
-                print("No ladders found up to max ladder_length.")
+                print("No ladders found up to max ladder length.")
             
                 
         else:
@@ -95,7 +95,7 @@ def help():
     print("ADD/A/+ <words...> - add individual words to the dictionary")
     print("REMOVE/R/- <words...> - remove individual words from the dictionary")
     print("EXPLORE/X <word> - print all known words that can be formed by inserting, deleting, or replacing one letter; or rearranging all letters")
-    print(f"LADDER/D <word1> <word2> - search for word ladders connecting word1 to word2 to a preset depth of {DEFAULT_MAX_LADDER_LENGTH}")
+    print(f"LADDER/D <word1> <word2> - search for word ladders connecting word1 to word2 to a preset depth of {MAX_LADDER_LENGTH}")
     
 
 def load_words(filepath):
