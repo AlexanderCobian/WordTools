@@ -129,8 +129,9 @@ def save_words(filepath):
         with open(filepath,"w") as fout:
             for word in sorted(words):
                 fout.write(f"{word}\n")
+        print(f"Known words written to \"{filepath}\"")
     except:
-        print("Error writing to \"{filepath}\"")
+        print(f"Error writing to \"{filepath}\"")
 
 def check_insert_or_delete(short_word,long_word):
     for i in range(len(long_word)):
